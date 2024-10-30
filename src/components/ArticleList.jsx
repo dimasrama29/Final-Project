@@ -9,7 +9,8 @@ export default function ArticleList({ query }) {
     const fetchArticles = async () => {
       try {
         const res = await axios.get(
-          `https://api.gdeltproject.org/api/v2/doc/doc?query=${query}&mode=artlist&format=json
+          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${query}&api-key=${
+            import.meta.env.VITE_API_KEY
           }`
         );
 
